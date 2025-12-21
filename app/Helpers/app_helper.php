@@ -98,7 +98,7 @@ if (!function_exists('pesan')) {
                 'status' => $error_code,
                 'message' => $message,
                 'data' => $data
-            ]);
+            ], JSON_PRETTY_PRINT);
     }
 }
 

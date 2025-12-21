@@ -7,7 +7,7 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error 404</title>
+    <title><?= $title; ?></title>
     <meta name="title" content="Schlemmer Automotive Indonesia WebApp" />
     <meta name="author" content="Ardy Priyo Sudiyantoko" />
 
@@ -148,46 +148,7 @@
 
         <?= $this->include('Template/sidebar.php'); ?>
 
-        <main class="app-main">
-            <div class="app-content-header">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h3 class="mb-0"><?= $title; ?></h3>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-end">
-                                <li class="breadcrumb-item active"><a href="<?= base_url() . 'dashboard' ?>" onclick="loading()">Dashboard</a></li>
-                                <li class="breadcrumb-item active">App Setup</li>
-                                <li class="breadcrumb-item active">User Mangement</li>
-                                <li class="breadcrumb-item active">List of Users</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="app-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row">
-                                <div class="card rounded-0">
-                                    <div class="card-header rounded-0">Error 400</div>
-                                    <div class="card-body">
-                                        <?php if (ENVIRONMENT !== 'production') : ?>
-                                            <?= nl2br(esc($message)) ?>
-                                        <?php else : ?>
-                                            <?= lang('Errors.sorryBadRequest') ?>
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+        <?= $this->renderSection('content') ?>
 
         <!--begin::Footer-->
         <footer class="app-footer">

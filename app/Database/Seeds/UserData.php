@@ -21,7 +21,10 @@ class UserData extends Seeder
                 'login_attempt' => 0,
                 'user_status' => 1,
                 'user_level' => 0,
-                'remark' => "From imported data"
+                'remark' => "From imported data",
+                'created_at' => date("Y-m-d H:i:s"),
+                'created_by' => 'system',
+                'updated_at' => date("Y-m-d H:i:s"),
             ],
             [
                 'user_id' => generate_uuid(),
@@ -35,7 +38,10 @@ class UserData extends Seeder
                 'login_attempt' => 0,
                 'user_status' => 1,
                 'user_level' => 1,
-                'remark' => "From imported data"
+                'remark' => "From imported data",
+                'created_at' => date("Y-m-d H:i:s"),
+                'created_by' => 'system',
+                'updated_at' => date("Y-m-d H:i:s"),
             ],
             [
                 'user_id' => generate_uuid(),
@@ -49,7 +55,10 @@ class UserData extends Seeder
                 'login_attempt' => 0,
                 'user_status' => 1,
                 'user_level' => 9,
-                'remark' => "From imported data"
+                'remark' => "From imported data",
+                'created_at' => date("Y-m-d H:i:s"),
+                'created_by' => 'system',
+                'updated_at' => date("Y-m-d H:i:s"),
             ]
         ];
 

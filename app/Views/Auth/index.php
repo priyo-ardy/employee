@@ -267,7 +267,7 @@
                 </div>
 
                 <div class="alert alert-success" role="alert" id="alertSuccess" hidden>
-                    <h4 class="alert-heading">Error !</h4>
+                    <h4 class="alert-heading">Success !</h4>
                     <p id="alertSuccessMessage">
 
                     </p>

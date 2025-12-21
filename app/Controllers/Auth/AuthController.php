@@ -115,4 +115,9 @@ class AuthController extends BaseController
     {
         return view('Auth/forgot');
     }
+
+    function logOut(){
+        session()->destroy();
+        return redirect()->to(base_url());
+    }
 }

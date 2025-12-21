@@ -49,4 +49,31 @@ class AuthModel extends Model
     {
         return $this->where('email_hash', $email_hash, true)->first();
     }
+
+    public function getUserListForRegister()
+    {
+        return $this->db->table('karyawan_aktif')
+            ->select('*')
+            ->whereNotIn('NIK', function ($subQuery) {
+                $subQuery->select('user_name')
+                    ->from('m_user_auth');
+            })
+            ->get()
+            ->getResultObject();
+    }
+
+    function getUserByNik($NIK)
+    {
+        return $this->db->table('karyawan_aktif')->select('nama_karyawan')->where('NIK', $NIK)->get()->getFirstRow();
+    }
+
+    function getUserByPhone($phone)
+    {
+        return $this->where('phone_hash', $phone)->first();
+    }
+
+    function getUserByEmail($email)
+    {
+        return $this->where('user_email', $email)->first();
+    }
 }

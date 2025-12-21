@@ -65,6 +65,13 @@ class UserTable extends Migration
                 'charset' => 'utf8',
                 'collation' => 'utf8_unicode_ci',
             ],
+            'user_photo' => [
+                'type' => "VARCHAR",
+                'constraint' => 255,
+                'null' => true,
+                'charset' => 'utf8',
+                'collation' => 'utf8_unicode_ci',
+            ],
             'login_attempt' => [
                 'type' => 'INT',
                 'constraint' => 11,
